@@ -6,5 +6,18 @@ namespace quick_notes
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 equipos = new Form2();
+            equipos.Show();
+            this.Hide();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
