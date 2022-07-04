@@ -36,7 +36,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(92, 155);
+            this.button1.Location = new System.Drawing.Point(36, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(263, 135);
             this.button1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(435, 155);
+            this.button2.Location = new System.Drawing.Point(368, 150);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(263, 135);
             this.button2.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

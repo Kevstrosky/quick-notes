@@ -36,8 +36,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Imprimir = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -67,7 +68,7 @@
             this.comboBox1.Location = new System.Drawing.Point(215, 192);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(193, 23);
+            this.comboBox1.Size = new System.Drawing.Size(224, 23);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "Seleccione un estado";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -93,11 +94,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(154, 253);
+            this.label3.Location = new System.Drawing.Point(239, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.Size = new System.Drawing.Size(49, 15);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Fecha";
+            this.label3.Text = "Equipos";
             // 
             // comboBox2
             // 
@@ -106,22 +107,22 @@
             "Francisco Javier Dávila Garcia - 30",
             "Daniel Antonio Quihuis Hernandez - 81",
             "Luis Gerardo Valenzuela Quijada - 87",
-            "Kevin Ochoa Guerrero - 9"});
+            "Kevin Ochoa Guerrero - 93"});
             this.comboBox2.Location = new System.Drawing.Point(215, 223);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(193, 23);
+            this.comboBox2.Size = new System.Drawing.Size(224, 23);
             this.comboBox2.TabIndex = 4;
             this.comboBox2.Text = "Selecciona un agente";
             // 
-            // button1
+            // Imprimir
             // 
-            this.button1.Location = new System.Drawing.Point(239, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Imprimir.Location = new System.Drawing.Point(292, 312);
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.Size = new System.Drawing.Size(75, 23);
+            this.Imprimir.TabIndex = 5;
+            this.Imprimir.Text = "button1";
+            this.Imprimir.UseVisualStyleBackColor = true;
+            this.Imprimir.Click += new System.EventHandler(this.button1_Click);
             // 
             // printDialog1
             // 
@@ -133,12 +134,20 @@
             this.printDialog1.ShowHelp = true;
             this.printDialog1.UseEXDialog = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(215, 252);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(224, 23);
+            this.textBox1.TabIndex = 6;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Imprimir);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -165,5 +174,7 @@
         private Button button1;
         public System.Drawing.Printing.PrintDocument printDocument1;
         public PrintDialog printDialog1;
+        private TextBox textBox1;
+        private Button Imprimir;
     }
 }

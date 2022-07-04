@@ -14,6 +14,7 @@ namespace quick_notes
     {
         public Form2()
         {
+
             InitializeComponent();
         }
 
@@ -24,15 +25,21 @@ namespace quick_notes
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            Font tipotexto = new Font("Arial", 10, FontStyle.Bold);
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", 446, 730);
+            printDocument1.PrinterSettings.DefaultPageSettings.PaperSize = printDocument1.DefaultPageSettings.PaperSize;
+            Font asunto = new Font("Arial", 12, FontStyle.Bold);
+            Font info = new Font("Arial", 10, FontStyle.Bold);
             String div = "__________________________________";
             DateTime date = DateTime.Now;
             Graphics graphics = e.Graphics;
             printDocument1.DefaultPageSettings.Landscape = true;
-            e.Graphics.DrawString(comboBox1.Text, tipotexto, Brushes.Black, 15, 0);
-            e.Graphics.DrawString(div, tipotexto, Brushes.Black, 15, 20);
-            e.Graphics.DrawString(comboBox2.Text, tipotexto, Brushes.Black, 15, 40);
-            e.Graphics.DrawString(date.ToString(), tipotexto, Brushes.Black, 15, 60);
+            e.Graphics.DrawString(comboBox1.Text, asunto, Brushes.Black, 0, 0);
+            e.Graphics.DrawString(div, info, Brushes.Black, 0, 20);
+            e.Graphics.DrawString(comboBox2.Text, info, Brushes.Black, 0, 40);
+            e.Graphics.DrawString(date.ToString(), info, Brushes.Black, 0, 60);
+            e.Graphics.DrawString(textBox1.Text, info, Brushes.Black, 0, 80);
+
+
 
 
 
@@ -48,15 +55,19 @@ namespace quick_notes
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, System.EventArgs e)
         {
-
-            printDialog1.ShowDialog();
-            if (printDialog1.ShowDialog() == DialogResult.OK)
+            PrintDialog printDialog1 = new PrintDialog();
+            printDialog1.Document = printDocument1;
+            DialogResult result = printDialog1.ShowDialog();
+            if (result == DialogResult.OK)
             {
+                printDocument1.DefaultPageSettings.Landscape = false;
                 printDocument1.Print();
             }
+
         }
+
     }
     
 }
