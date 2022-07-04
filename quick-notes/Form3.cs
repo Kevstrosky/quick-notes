@@ -10,17 +10,23 @@ using System.Windows.Forms;
 
 namespace quick_notes
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
-
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 inicio = new Form1();
+            inicio.Show();
+            this.Hide();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -33,29 +39,19 @@ namespace quick_notes
             DateTime date = DateTime.Now;
             Graphics graphics = e.Graphics;
             printDocument1.DefaultPageSettings.Landscape = true;
-            e.Graphics.DrawString(comboBox1.Text, asunto, Brushes.Black, 0, 0);
-            e.Graphics.DrawString(div, info, Brushes.Black, 0, 20);
-            e.Graphics.DrawString(comboBox2.Text, info, Brushes.Black, 0, 40);
-            e.Graphics.DrawString(date.ToString(), info, Brushes.Black, 0, 60);
-            e.Graphics.DrawString(textBox1.Text, info, Brushes.Black, 0, 80);
-
-
+            e.Graphics.DrawString("GARANTÍA", asunto, Brushes.Black, 80, 0);
+            e.Graphics.DrawString("Folio/Pos: "+textBox1.Text, asunto, Brushes.Black, 0, 20);
+            e.Graphics.DrawString("Cliente: " + textBox2.Text, info, Brushes.Black, 0, 40);
+            e.Graphics.DrawString("Producto: " + textBox3.Text, info, Brushes.Black, 0, 60);
+            e.Graphics.DrawString(div, info, Brushes.Black, 0, 80);
+            e.Graphics.DrawString(comboBox1.Text, info, Brushes.Black, 0, 100);
+            e.Graphics.DrawString(date.ToString(), info, Brushes.Black, 0, 120);
 
 
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void printPreviewDialog1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog1 = new PrintDialog();
             printDialog1.Document = printDocument1;
@@ -65,16 +61,6 @@ namespace quick_notes
                 printDocument1.DefaultPageSettings.Landscape = false;
                 printDocument1.Print();
             }
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form1 inicio = new Form1();
-            inicio.Show();
-            this.Hide();
-
         }
     }
-    
 }

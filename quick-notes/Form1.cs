@@ -19,5 +19,13 @@ namespace quick_notes
         {
 
         }
+       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 garantias = new Form3();
+            garantias.Show();
+            this.Hide();
+
+        }
     }
 }

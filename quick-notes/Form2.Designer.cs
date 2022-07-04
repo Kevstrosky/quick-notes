@@ -39,6 +39,7 @@
             this.Imprimir = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -120,7 +121,7 @@
             this.Imprimir.Name = "Imprimir";
             this.Imprimir.Size = new System.Drawing.Size(75, 23);
             this.Imprimir.TabIndex = 5;
-            this.Imprimir.Text = "button1";
+            this.Imprimir.Text = "Imprimir";
             this.Imprimir.UseVisualStyleBackColor = true;
             this.Imprimir.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -141,11 +142,22 @@
             this.textBox1.Size = new System.Drawing.Size(224, 23);
             this.textBox1.TabIndex = 6;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Atrás";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Imprimir);
             this.Controls.Add(this.comboBox2);
@@ -176,5 +188,6 @@
         public PrintDialog printDialog1;
         private TextBox textBox1;
         private Button Imprimir;
+        private Button button2;
     }
 }
