@@ -38,14 +38,18 @@ namespace quick_notes
             String div = "__________________________________";
             DateTime date = DateTime.Now;
             Graphics graphics = e.Graphics;
+            DateTime timeSelected = monthCalendar1.SelectionStart;
+
             printDocument1.DefaultPageSettings.Landscape = true;
             e.Graphics.DrawString("GARANTÍA", asunto, Brushes.Black, 80, 0);
-            e.Graphics.DrawString("Folio/Pos: "+textBox1.Text, asunto, Brushes.Black, 0, 20);
-            e.Graphics.DrawString("Cliente: " + textBox2.Text, info, Brushes.Black, 0, 40);
-            e.Graphics.DrawString("Producto: " + textBox3.Text, info, Brushes.Black, 0, 60);
-            e.Graphics.DrawString(div, info, Brushes.Black, 0, 80);
-            e.Graphics.DrawString(comboBox1.Text, info, Brushes.Black, 0, 100);
-            e.Graphics.DrawString(date.ToString(), info, Brushes.Black, 0, 120);
+            e.Graphics.DrawString("Folio/Pos: "+textBox1.Text, info, Brushes.Black, 0, 20);
+            e.Graphics.DrawString("Fecha de adquisición: "+timeSelected.ToShortDateString(), info, Brushes.Black, 0, 40);
+            e.Graphics.DrawString("Cliente: " + textBox2.Text, info, Brushes.Black, 0, 60);
+            e.Graphics.DrawString("Producto: " + textBox3.Text, info, Brushes.Black, 0, 80);
+            e.Graphics.DrawString("Falla: " + comboBox2.Text, info, Brushes.Black, 0, 100);
+            e.Graphics.DrawString(div, info, Brushes.Black, 0, 120);
+            e.Graphics.DrawString(comboBox1.Text, info, Brushes.Black, 0, 140);
+            e.Graphics.DrawString(date.ToString(), info, Brushes.Black, 0, 160);
 
 
 
